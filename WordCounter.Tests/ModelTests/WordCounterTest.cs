@@ -15,5 +15,13 @@ namespace WordCounter.Tests
 
                 Assert.AreEqual(true, testRepeatCounter.CounterCheck());
             }
+
+            [TestMethod]
+            public void IndicateCaseSensitivity_ReturnBool_True()
+            {
+              RepeatCounter testRepeatCounter = new RepeatCounter("aPpLe","Apple Tree", 0);
+
+                Assert.AreEqual(true, testRepeatCounter.CounterCheck());
+            }
       }
 }

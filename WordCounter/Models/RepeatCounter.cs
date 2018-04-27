@@ -35,7 +35,7 @@ namespace WordCounter.Models
         public bool CounterCheck()
         {
 
-            if (_phrase.Contains(_word))
+            if (_phrase.ToUpper().Contains(_word.ToUpper()))
             {
               return true;
             }
