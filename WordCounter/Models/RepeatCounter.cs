@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WordCounter.Models
 {
-    public class WordCounter
+    public class RepeatCounter
     {
         private string _word;
         private string _phrase;
         private int _counter;
 
-        public WordCounter(string word string phrase int counter)
+        public RepeatCounter(string word, string phrase, int counter)
         {
             _word = word;
             _phrase = phrase;
@@ -32,15 +32,20 @@ namespace WordCounter.Models
             return _counter;
         }
 
-        public int RepeatCounter()
+        public bool CounterCheck()
         {
 
-            if (phrase.Contains(word))
+            if (_phrase.Contains(_word))
             {
-              coun
+              return true;
+            }
+            else
+            {
+
+
             }
 
-
+          return false;
         }
     }
 }
