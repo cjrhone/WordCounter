@@ -1,0 +1,10 @@
+
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+
+@if(Model != null)
+      {
+
+              <h3> Does the phrase  '@Model.GetPhrase()' contain: '@Model.GetWord()' ?</h3>
+              <h1>@Model.WordCheck()</h1>
+}
