@@ -9,6 +9,16 @@
 ##### Setup/Installation Requirements
 * .NET
 * C#
+
+## Specifications
+| Spec | Input | Output |
+| :-------------     | :------------- | :------------- |
+| **WordCounter Indicates Word in Phrase** | Word "Hey" Phrase "Hey you!" | bool return "true"|
+| **WordCounter Indicates case-sensitivity** | Word "hEy" Phrase "Hey you!" | bool return "true"|
+| **WordCounter counts words in phrase** | Word "apple" Phrase "red apple green apple" | int return "2"|
+| **WordCounter convert numbers to string** | Word "1234" Phrase "1234567" | bool return "true"|
+
+
 ##### Known Bugs
 _So far there are no bugs_
 
