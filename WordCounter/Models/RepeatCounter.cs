@@ -32,7 +32,7 @@ namespace WordCounter.Models
             return _counter;
         }
 
-        public bool CounterCheck()
+        public bool WordCheck()
         {
 
             if (_phrase.ToUpper().Contains(_word.ToUpper()))
@@ -46,6 +46,26 @@ namespace WordCounter.Models
             }
 
           return false;
+        }
+
+        public int CounterCheck()
+        {
+            int _counter = 0;
+
+            for (int i = 0; i <= _phrase.Length; i++)
+            {
+                  if (_phrase.ToUpper().Contains(_word.ToUpper()))
+                  {
+                    _counter += 1;
+                  }
+                  else
+                  {
+
+                  }
+            }
+
+
+          return _counter;
         }
     }
 }
