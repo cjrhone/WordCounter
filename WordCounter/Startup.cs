@@ -35,7 +35,7 @@ namespace WordCounter
             });
             app.Run(async (context) =>
             {
-					await context.Response.WriteAsync("Vacations Apps!");
+					await context.Response.WriteAsync("WordCounter goes here!");
             });
         }
     }
