@@ -8,13 +8,12 @@ namespace WordCounter.Models
     {
         private string _word;
         private string _phrase;
-        // private int _counter;
+        private int _counter;
 
         public RepeatCounter(string word, string phrase)
         {
             _word = word;
             _phrase = phrase;
-            // _counter = counter;
         }
 
         public string GetWord()
@@ -27,10 +26,10 @@ namespace WordCounter.Models
             return _phrase;
         }
 
-        // public int GetCounter()
-        // {
-        //     return _counter;
-        // }
+        public int GetCounter()
+        {
+            return _counter;
+        }
 
         public bool WordCheck()
         {
@@ -51,7 +50,7 @@ namespace WordCounter.Models
 
         public int CounterCheck()
         {
-            int _counter = 0;
+            _counter = 0;
 
             foreach(var word in _phrase.ToUpper().Split(' '))
             {
@@ -66,9 +65,9 @@ namespace WordCounter.Models
                 }
             }
 
-
           return _counter;
         }
+
 
     }
 }

@@ -31,5 +31,14 @@ namespace WordCounter.Tests
 
                 Assert.AreEqual(2, testRepeatCounter.CounterCheck());
             }
+
+            [TestMethod]
+            public void IndicateWordCountInPhrase_Hi_In_HIHIHI()
+            {
+              RepeatCounter testRepeatCounter = new RepeatCounter("hi","hi hi hi");
+
+                Assert.AreEqual(3, testRepeatCounter.CounterCheck());
+            }
+
       }
 }
