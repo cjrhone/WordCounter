@@ -11,7 +11,7 @@ namespace WordCounter.Tests
             [TestMethod]
             public void IndicateWordInPhrase_ReturnBool_True()
             {
-              RepeatCounter testRepeatCounter = new RepeatCounter("Apple","Apple Tree", 0);
+              RepeatCounter testRepeatCounter = new RepeatCounter("Apple","Apple Tree");
 
                 Assert.AreEqual(true, testRepeatCounter.WordCheck());
             }
@@ -19,7 +19,7 @@ namespace WordCounter.Tests
             [TestMethod]
             public void IndicateCaseSensitivity_ReturnBool_True()
             {
-              RepeatCounter testRepeatCounter = new RepeatCounter("aPpLe","Apple Tree", 0);
+              RepeatCounter testRepeatCounter = new RepeatCounter("aPpLe","Apple Tree");
 
                 Assert.AreEqual(true, testRepeatCounter.WordCheck());
             }
@@ -27,9 +27,9 @@ namespace WordCounter.Tests
             [TestMethod]
             public void IndicateWordCountInPhrase_ReturnNumber_2()
             {
-              RepeatCounter testRepeatCounter = new RepeatCounter("apple","Red Apple Green Apple", 0);
+              RepeatCounter testRepeatCounter = new RepeatCounter("apple","Red Apple Green Apple");
 
-                Assert.AreEqual(1, testRepeatCounter.CounterCheck());
+                Assert.AreEqual(2, testRepeatCounter.CounterCheck());
             }
       }
 }

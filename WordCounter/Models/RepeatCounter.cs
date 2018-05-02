@@ -48,30 +48,27 @@ namespace WordCounter.Models
           return false;
         }
 
-  //This is where I failed. Wasn't sure how to count each word within a phrase
+
         public int CounterCheck()
         {
             int _counter = 0;
 
-            for (int i = 0; i <= _phrase.Length; i++)
+            foreach(var word in _phrase.ToUpper().Split(' '))
             {
-                  foreach(var word in _phrase.ToUpper())
-                  {
 
-                      if ( _phrase.ToUpper().Contains(_word.ToUpper()))
-                      {
-                        _counter += 1;
-                      }
-                      else
-                      {
+                if ( word == _word.ToUpper())
+                {
+                  _counter += 1;
+                }
+                else
+                {
 
-                      }
-                  }
+                }
             }
+
 
           return _counter;
         }
-    //This is where I failed. Wasn't sure how to count each word within a phrase without the word parameter being a "Char" type
-    //I think maybe two for loops, one looping a phrase.Length, and another looping word.Length could work -- but I didn't know how to apply that.
+
     }
 }
